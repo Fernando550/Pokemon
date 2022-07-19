@@ -1,0 +1,131 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+.titleImg{
+    width: 60%;
+    object-fit: contain;
+}
+.img{
+    width: 100%;
+    object-fit: contain;
+}
+.container-pokemon{
+    width: 100%;
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px,300px));;
+    grid-template-rows: minmax(300px,350px);
+    gap: 35px;
+    padding: 20px;
+}
+.card{
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 1500ms;
+    /* transform: rotateY(180deg); */
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.choose{
+    transform: rotateY(180deg);
+    border: solid 4px #fecb02;
+    border-radius: 24px;
+}
+.face{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 4000ms;
+}
+.face.front {
+    background: #3c5aa1;
+}
+.face.back {
+    width: 100%;
+    margin-top: 0px;
+    display: grid;
+    border: solid 1px #6b0504;
+    transform: rotateX(180deg) rotateZ(180deg);
+}
+.face.back .img{
+    width: 60%;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+.face.back .info{
+    width: 100%;
+    margin: 10px;
+    font-size: 1rem;
+}
+.face.back button{
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    background-color: #3c5aa1;
+    color: #fecb02;
+    border: none;
+    border-radius: 10px;
+}
+.face.back button{
+    font-size: 1.5rem;
+}
+.face.back button:hover{
+    color: #6b0504;
+}
+.container-button{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+}
+.start-fight{
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    font-size: 2rem;
+    background-color: #d90009;
+    border: none;
+    border-radius: 10px;
+    color: #fecb02;
+}
+.start-fight a{
+    text-decoration: none;
+    color: #fecb02;
+}
+.start-fight:hover{
+    color: white;
+}
+.fight{
+    display: none;
+}
+.field{
+    width: 110vw;
+    height: 600px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkVOMX04eXxzm4OGf3pgzHiS_QdM0k-_ylNw&usqp=CAU");   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.game-card{
+    width: 50%;
+    height: 100%;
+}
